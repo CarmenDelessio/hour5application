@@ -1,0 +1,57 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin" tools:context=".MainActivity">
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Run on UI Thread"
+        android:id="@+id/uiThreadButton"
+        android:layout_marginTop="58dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Post to Thread"
+        android:id="@+id/postButton"
+        android:layout_below="@+id/uiThreadButton"
+        android:layout_alignParentStart="true"
+        android:layout_alignEnd="@+id/uiThreadButton" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Start AsyncTask"
+        android:id="@+id/asyncTaskButton"
+        android:layout_below="@+id/postButton"
+        android:layout_alignParentStart="true"
+        android:layout_alignEnd="@+id/postButton" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Start IntentService"
+        android:id="@+id/intentServiceButton"
+        android:layout_below="@+id/asyncTaskButton"
+        android:layout_alignParentStart="true"
+        android:layout_alignEnd="@+id/asyncTaskButton" />
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Results"
+        android:id="@+id/textView"
+        android:layout_below="@+id/intentServiceButton"
+        android:layout_marginTop="70dp"
+        android:layout_alignEnd="@+id/intentServiceButton"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true" />
+
+</RelativeLayout>
