@@ -42,12 +42,14 @@ public class MainActivity extends ActionBarActivity {
         postButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                resultsTextView.setText("Starting View.post() ");
+
                 new Thread(new Runnable() {
                     public void run() {
                         SystemClock.sleep(5000);
                         resultsTextView.post(new Runnable() {
                             public void run() {
-                                resultsTextView.setText("Updated using post ");
+                                resultsTextView.setText("Updated using View.post() ");
                             }
                         });
                     }
@@ -69,6 +71,8 @@ public class MainActivity extends ActionBarActivity {
         intentServiceButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                resultsTextView.setText("Starting Intent Service ");
+
                 Intent delayIntent = new Intent(getApplicationContext(), DelayIntentService.class);
                 startService(delayIntent);
             }

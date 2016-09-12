@@ -20,7 +20,7 @@ public class DelayIntentService extends IntentService {
             SystemClock.sleep(5000);
             Intent broadcastIntent = new Intent();
             broadcastIntent.setAction(ACTION_DELAY);
-            broadcastIntent.putExtra(EXTRA_MESSAGE, "UPDATE:  USING INTENT SERVICE");
+            broadcastIntent.putExtra(EXTRA_MESSAGE, "Updated Using IntentService & BroadcastReceiver");
             sendBroadcast(broadcastIntent);
         }
 
