@@ -1,5 +1,3 @@
-# hour5application
-Responsive apps using background processing
 
 # Hour 5 - Responsive Apps: Running in the Background
 
